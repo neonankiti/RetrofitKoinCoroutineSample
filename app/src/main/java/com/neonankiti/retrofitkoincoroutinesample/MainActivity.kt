@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        placeView.text = bisonUseCase.move()
+        placeView.text = bisonUseCase.move().move
     }
 }
 
