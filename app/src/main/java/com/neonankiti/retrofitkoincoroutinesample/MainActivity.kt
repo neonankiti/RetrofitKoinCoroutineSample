@@ -5,10 +5,12 @@ import android.os.Bundle
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.ext.android.inject
+import org.koin.android.scope.currentScope
 
 class MainActivity : AppCompatActivity() {
 
-    private val bisonUseCase by inject<BisonUseCase>()
+
+    private val bisonUseCase by currentScope.inject<BisonUseCase>()
 
     private val placeView get() = findViewById<TextView>(R.id.place)
 
